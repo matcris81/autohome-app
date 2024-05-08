@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app/authentication_screen.dart';
+import 'routes.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AuthScreen(),
+      initialRoute: AppRoutes.main,
+      onGenerateRoute: AppRoutes.generateRoute,
     );
   }
 }
